@@ -2,7 +2,6 @@ import adapter.*;
 import infra.*;
 
 public class Main {
-
     public static void main(String[] args) {
 
         // Adapter pattern test
