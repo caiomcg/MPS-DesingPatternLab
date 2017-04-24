@@ -1,4 +1,4 @@
-package model;
+package business.model;
 
 /**
  * Created by caiomcg on 24/04/17.
