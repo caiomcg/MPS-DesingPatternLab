@@ -1,6 +1,6 @@
 package infra;
 
-import business.model.User;
+import model.User;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import business.model.User;
+import model.User;
 
 public class Database implements Persistence {
 
