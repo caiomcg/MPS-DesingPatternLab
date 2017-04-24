@@ -11,8 +11,8 @@ public class Main {
         adpt1.getAccessToken();
         adpt2.getAccessToken();
 
-        PersistenceFactory pf = new JsonFactory();
-        Persistence per = pf.makePersistence();
+        PersistenceFactory pf = new PersistenceFactory();
+        Persistence per = pf.getPersistence("json");
 
         return;
     }
