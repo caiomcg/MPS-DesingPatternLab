@@ -40,12 +40,6 @@ public class PersistenceJSONImpl implements Persistence {
         try {
             json = new String(Files.readAllBytes(Paths.get(database)));
         } catch (IOException e) {
-            //json = "{\n" +
-            //        "  \"admin\": {\n" +
-            //        "    \"login\": \"administrator\",\n" +
-            //        "    \"pwd\": \"adminis12\"\n" +
-            //        "  }\n" +
-            //        "}";
             return new HashMap<>();
         }
 
