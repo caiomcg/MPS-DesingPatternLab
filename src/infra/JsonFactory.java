@@ -7,6 +7,6 @@ public class JsonFactory implements PersistenceFactory {
     @Override
     public Persistence makePersistence() {
         System.out.println("Making PersistenceJSONImpl");
-        return new PersistenceJSONImpl("jsondb.json");
+        return new PersistenceJSONImpl();
     }
 }

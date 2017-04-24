@@ -17,18 +17,16 @@ import java.util.Map;
  */
 public class PersistenceJSONImpl implements Persistence {
 
-    private String database;
+    private static final String DATABASE = "./src/database/";
 
-    public PersistenceJSONImpl(String database) {
-        this.database = "./src/database/" + database;
-    }
+    public PersistenceJSONImpl() {}
 
     @Override
     public void saveOnDatabase(Map<String, User> userMap) throws PersistenceException {
         String json = mapToJson(userMap);
 
         try {
-            Files.write(Paths.get(this.database), json.getBytes());
+            Files.write(Paths.get(DATABASE), json.getBytes());
         } catch (IOException e) {
             throw new PersistenceException("Unable to create database.");
         }
@@ -38,7 +36,7 @@ public class PersistenceJSONImpl implements Persistence {
     public HashMap<String, User> loadFromDatabase() {
         String json;
         try {
-            json = new String(Files.readAllBytes(Paths.get(database)));
+            json = new String(Files.readAllBytes(Paths.get(DATABASE)));
         } catch (IOException e) {
             return new HashMap<>();
         }
