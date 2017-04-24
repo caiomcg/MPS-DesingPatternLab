@@ -13,15 +13,19 @@ public class User {
         this.accessToken = accessToken;
     }
 
-    String getAccessToken() {
+    public String getAccessToken() {
         return accessToken;
     }
 
-    String getUsername() {
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getUsername() {
         return username;
     }
 
-    void setUsername(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 }
